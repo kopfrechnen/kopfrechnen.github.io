@@ -124,6 +124,10 @@ function eventFire(el, etype){
     el.dispatchEvent(evObj);
   }
 }
+	
+Mousetrap.stopCallback = function () {
+     return false;
+}
 
 function round(wert, dez) {
         wert = parseFloat(wert);
