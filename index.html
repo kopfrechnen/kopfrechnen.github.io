@@ -112,6 +112,16 @@ const b = document.getElementById("button");
 const op = "+-*";
 var or, e, r1, r2
 t.innerHTML = time;
+	
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
+}
 
 function round(wert, dez) {
         wert = parseFloat(wert);
@@ -172,7 +182,7 @@ function myFunction() {
   
 };
 	
-Mousetrap.bind(["space", "enter"], myFunction)
+Mousetrap.bind(["space", "enter"], myFunction())
 
 myFunction();
 function ererer(){
