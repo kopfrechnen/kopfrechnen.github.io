@@ -182,7 +182,9 @@ function myFunction() {
   
 };
 	
-Mousetrap.bindGlobal("enter", myFunction())
+Mousetrap.bindGlobal("enter", function (){
+	myFunction();
+})
 
 myFunction();
 function ererer(){
