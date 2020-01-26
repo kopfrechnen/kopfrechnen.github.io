@@ -3,6 +3,7 @@
 body {
   font-family: -apple-system, sans-serif;
   font-size: 100px;
+opacity: 1;
   height: 100%;
 	overflow: auto;
 }
@@ -119,12 +120,12 @@ function round(wert, dez) {
 }
 
 setTimeout(function(){
-	removeElement("div")
+	opacElement("div")
 },1000)
 
 //  || isNaN(Number(a.innerHTML)
 
-function removeElement(elementId) {
+function opacElement(elementId) {
     // Removes an element from the document
     var element = document.getElementById(elementId);
     element.parentNode.removeChild(element);
