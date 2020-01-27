@@ -163,7 +163,7 @@ function myFunction() {
   a.innerHTML = r1 + or + r2;
   i.value = null;
   r.innerHTML = Number(r.innerHTML)+1;
-  } else if(i.value != "" || i.value != "leo"+e) {
+  } else if(i.value != "" || i.value != "leo") {
   w.innerHTML = Number(w.innerHTML)+1;
   t.innerHTML -= time/10;
   i.value = null;
@@ -173,7 +173,7 @@ function myFunction() {
 		a.style.color = "black";
 		a.style.fontSize = "50pt";
 	},500);}
-  else if(i.value == "leo"+e){
+  else if(i.value == "leo"){
     or = op[Math.floor(Math.random()*op.length)]
     r1 = (or === "+" || or === "-") ? Math.floor(Math.random()*80) : Math.floor(Math.random()*13)
     r2 = (or === "+" || or === "-") ? Math.floor(Math.random()*40) : Math.floor(Math.random()*10)
