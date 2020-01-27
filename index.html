@@ -103,7 +103,8 @@ opacity: 1;
 <input class="mousetrap" id="input" type="number" autofocus>
 <input type="button" value="Lösen!" id="button" onclick="myFunction()">
 <script>
-const time = Number(prompt("Time?"));
+const time = Number(prompt("Time? (in seconds)", 60))
+time > 600 || time < 10 ? time = 60 : time = time;
 const a = document.getElementById("aufgabe");
 const i = document.getElementById("input");
 const r = document.getElementById("right");
