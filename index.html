@@ -104,7 +104,7 @@ opacity: 1;
 <input type="button" value="Lösen!" id="button" onclick="myFunction()">
 <script>
 let time = Number(prompt("Time? (in seconds)", 60))
-time > 600 || time < 10 ? time = 60 : time = time;
+time = (time > 600 || time < 10) ? 60 : time;
 const a = document.getElementById("aufgabe");
 const i = document.getElementById("input");
 const r = document.getElementById("right");
@@ -113,23 +113,12 @@ const t = document.getElementById("timer");
 const d = document.getElementById("div");
 const b = document.getElementById("button");
 // time == 8.42008 ? r.innerHTML -=-100 : time = time;
-time != 8.42008 ? const op = "+-*" : const op = "Cheater!";
+// time != 8.42008 ? const op = "+-*" : const op = "Cheater!";
+	const op = "+-*"
 let or, e, r1, r2
 t.innerHTML = time;
 	
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-}
-	
-Mousetrap.stopCallback = function () {
-     return false;
-}
+
 
 function round(wert, dez) {
         wert = parseFloat(wert);
